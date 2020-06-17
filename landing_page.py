@@ -21,38 +21,7 @@ welcome = html.Div(
         ],
     className="welcome_img")
 
-# body = dbc.Container(
-#     [
-#         dbc.Row(
-#             [
-#                 dbc.Col(
-#                     [
-#                         html.H2("Jon Tyler - Employable"),
-#                         html.P(
-#                             """\
-#                         I have a genuine passion for numbers, conceptualizing, and data science. I want to develop my skill set so I don’t “just have a job” but instead can go and pursue a career with like minded teams that are making a positive impact on the world. Socially Distant but always available at Jonctyler@gmail.com. """
-#                         ),
-#                         dbc.Button("I am a button", color="secondary")
-#                     ],
-#                     md=4,
-#                 ),
-#                 dbc.Col(
-#                     [
-#                         html.H2("Graph"),
-#                         html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode())
-#                     #                        dcc.Graph(
-# #                            figure={"data": [{"x": [1, 2, 3], "y": [1, 10, 4]}]}
-#                         ),
-#                     ],
-#                 ),
-#             ]
-#         )
-#     ],
-#     className="mt-4",
-# )
-
-
-def landing_page():
+def Landing_page():
     layout = html.Div([
         welcome,
     ])
