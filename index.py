@@ -4,6 +4,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 from time_series import graph_page, build_graph
+from landing_page import Landing_page
 from homepage import Homepage
 from about import About
 from missing_page import missing_page
@@ -16,9 +17,10 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.config.suppress_callback_exceptions = True
 
 app.layout = html.Div([
-    dcc.Location(id = 'url', pathname='/home', refresh = False),
+    dcc.Location(id = 'url',refresh = False),
     html.Div(id = 'page-content')
 ])
+
 #Navigation callbacks
 @app.callback(Output('page-content', 'children'),
             [Input('url', 'pathname')])
@@ -29,8 +31,8 @@ def display_page(pathname):
         return graph_page()
     if pathname == '/projects':
         return graph_page()
-    if pathname == '/trial':
-        return missing_page()
+    # if pathname == '/trial':
+    #     return Homepage()
     if pathname == '/home':
         return Homepage()
     else:

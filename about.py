@@ -13,10 +13,12 @@ body = dbc.Container(
             [
                 dbc.Col(
                     [
-                        html.H2("Yo, my name is on and i want to be...."),
                         html.P(
                             """\
-                        Filler, FillerFillerFillerFillerFiller, Filler.."""
+                        I am a geek and dreamer. I watch science fiction movies and read science fiction books as much \
+                        for the powerful narrative as I do for the possibilities. I’ve watched every Star Trek episode \
+                        because I choose to believe with hard work and equality we can reach a new potential and be our \
+                        best selves."""
                         ),
                         dbc.Button("I am a button", color="secondary"),
                     ],
@@ -25,9 +27,6 @@ body = dbc.Container(
                 dbc.Col(
                     [
                         html.H2("Graph"),
-                        dcc.Graph(
-                            figure={"data": [{"x": [1, 2, 3], "y": [1, 10, 4]}]}
-                        ),
                     ],
                 ),
             ]
