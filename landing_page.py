@@ -52,7 +52,7 @@ welcome = html.Div(
 # )
 
 
-def Homepage():
+def landing_page():
     layout = html.Div([
         welcome,
     ])
