@@ -8,6 +8,7 @@ from landing_page import Landing_page
 from homepage import Homepage
 from about import About
 from missing_page import missing_page
+from auditor import Auditor
 
 
 external_stylesheets = [dbc.themes.CYBORG, '/assets/background.css']
@@ -31,19 +32,13 @@ def display_page(pathname):
         return graph_page()
     if pathname == '/projects':
         return graph_page()
-    # if pathname == '/trial':
-    #     return Homepage()
+    if pathname == '/auditor':
+        return Auditor()
     if pathname == '/home':
         return Homepage()
     else:
         return missing_page()
 
-
-#Go home button on 404
-# @app.callback(
-#     Output('page-content', 'children'),
-#     [Input('goHome', 'n_clicks')]
-# )
 
 #Graph update
 @app.callback(

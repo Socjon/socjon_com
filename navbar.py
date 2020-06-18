@@ -12,7 +12,7 @@ def Navbar():
                 in_navbar=True,
                 label="Portfolio",
                 children=[
-                    dbc.DropdownMenuItem("Auditors Aid", href="/projects"),
+                    dbc.DropdownMenuItem("Auditors Aid", href="/auditor"),
                     dbc.DropdownMenuItem("How I built this site", href="/dash_101"),
                     dbc.DropdownMenuItem(divider=True),
                     dbc.DropdownMenuItem("Entry 3"),
