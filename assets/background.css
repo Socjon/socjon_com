@@ -45,6 +45,10 @@
     max-height:100%;
 }
 
+.colContainer {
+    display: table; /* Make the container element behave like a table */
+    width: 100%;
+}
 
 .homePage_img_container {
     height: 275px;
@@ -60,16 +64,28 @@
 }
 
 .welcomeBanner {
-    background: #664c8f;
+    background: #4da6ff;
     height: auto;
-    padding: 50px 80px
+    padding: 30px 80px
 }
 
-.homePage_text {
+.Generaltext {
     color: white;
     font-family: Arial;
 }
 
 .homePage_padding {
     padding: 10px 10px
+}
+
+.aboutHeader {
+    background: url(/assets/purple_sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
