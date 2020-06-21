@@ -51,7 +51,7 @@ def Navbar():
                                         ],
                     ),
                     dbc.NavLink("About", href="/about"),
-                    dbc.NavLink("Blog", href="https://medium.com/@socjon"),
+                    dbc.NavLink("Blog", href="/blog"),
                     dbc.NavLink("LinkedIn", href="https://www.linkedin.com/in/tyler-jonathan/")
                 ], className="navLink"
             ),
