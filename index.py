@@ -1,15 +1,21 @@
+from time import time
+
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
-# from time_series import graph_page, build_graph
-from landing_page import Landing_page
+
+# Individual pages
 from homepage import Homepage
 from about import About
-from missing_page import missing_page
+from blog import Blog
 from auditor import Auditor
 
+# Pages that didn't make it
+# from missing_page import missing_page
+# from time_series import graph_page, build_graph
+# from landing_page import Landing_page
 
 external_stylesheets = [dbc.themes.CYBORG, '/assets/background.css']
 
@@ -17,9 +23,11 @@ application = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app = application
 
+# app.enable_dev_tools(dev_tools_hot_reload=True)
+
 # app.scripts.config.serve_locally = True
 # app.css.config.serve_locally = True
-# app.config.suppress_callback_exceptions = True
+app.config.suppress_callback_exceptions = True
 
 
 
@@ -34,8 +42,8 @@ app.layout = html.Div([
 def display_page(pathname):
     if pathname == '/about':
         return About()
-    # if pathname == '/time-series':
-    #     return graph_page()
+    if pathname == '/blog':
+        return Blog()
     # if pathname == '/projects':
     #     return graph_page()
     if pathname == '/auditor':
@@ -44,7 +52,6 @@ def display_page(pathname):
         return Homepage()
     else:
         return Homepage()
-
 
 # @app.callback(
 #     Output('output', 'children'),
