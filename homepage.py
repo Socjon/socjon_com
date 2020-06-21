@@ -16,12 +16,12 @@ body = dbc.Container(
         dbc.Col(
             [
                 html.P("We live in a world of so much information. Our little blue marble is a sea of data. \
-                        We measure and document everything:", style={"display": "inline"}),
+                        We measure and document everything: ", style={"display": "inline"}),
                 html.Span(
-                       className="homePage_text", id='live-update-text'),
+                    id='live-update-text'),
                 dcc.Interval(
                     id='interval-component',
-                    interval=2 * 1000,  # in milliseconds
+                    interval=10 * 1000,  # in milliseconds
                     n_intervals=0
                 ),
                 html.Img(src="assets/SU_Earth.png"),
@@ -39,7 +39,9 @@ body = dbc.Container(
         ),
     ]
 )
-dictionary_of_urls = {"This stuff": "here", "earth": "saturn", "moon": "Aliens are attacking us"}
+dictionary_of_urls = {"penguin populations": "http://www.penguinmap.com/mapppd",
+                      "stereotype bias in language models": "https://stereoset.mit.edu/",
+                      "uniform geographic name usage throughout the Federal Government": "http://geonames.usgs.gov/index.html"}
 
 
 # Updating something on an interval
@@ -47,9 +49,11 @@ dictionary_of_urls = {"This stuff": "here", "earth": "saturn", "moon": "Aliens a
 @app.callback(Output('live-update-text', 'children'),
               [Input('interval-component', 'n_intervals')])
 def update_links(n):
-    dataset, urls = random.choice(list(dictionary_of_urls.items()))
-    return html.Span("from the earliest sounds on a wax cylinder <sub>subscript</sub>, \
-                        the futures of the Dow Jones, to our current heart rates. This is a fact.")
+    one, two, three = random.sample(list(dictionary_of_urls.keys()), 3)
+    return html.Span([
+        dcc.Link(one + ", ", href=dictionary_of_urls[one]),
+        dcc.Link(two + ", ", href=dictionary_of_urls[two]),
+        dcc.Link("and " + three + ".", href=dictionary_of_urls[three])],style={"display": "inline"})
 
 def Homepage():
     layout = html.Div([
