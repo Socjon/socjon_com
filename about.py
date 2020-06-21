@@ -50,5 +50,5 @@ def About():
         nav,
         header,
         body
-    ])
+    ], className="main")
     return layout

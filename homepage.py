@@ -7,44 +7,33 @@ from navbar import Navbar
 
 nav = Navbar()
 
-
-welcome = html.Div(
-    [
-        html.H1("Welcome", className="welcomeHeader")
-    ],
-    className="welcomeBanner"
-)
-
 body = dbc.Container(
     [
-        dbc.Row(
-            [
                 dbc.Col(
                     [
-                        html.P(
-                            """
-                        Looking for work. 
-                        """
-                        , className="homePage_text"),
-
+                        html.P("We live in a world of so much information. Our little blue marble is a sea of data. \
+                        We measure and document everything: from the earliest sounds on a wax cylinder <sub>subscript</sub>, \
+                        the futures of the Dow Jones, to our current heart rates. This is a fact.",
+                               className="homePage_text"),
+                        html.Img(src="assets/SU_Earth.png"),
+                        html.P("All of this data tells a story. Powerful tools exist to navigate these seas. \
+                        IDE and Dashboards exist as the schooners, boats, and ships that allow us to set sail. \
+                        Machine learning can see the squalls coming to avoid them. The only thing left is the crew and \
+                        the destination.",
+                               className="homePage_text"),
+                        html.Br(),
+                        html.P("So this is my small vessel venturing into the great unknown. \
+                        Take a look where I have been and maybe help me find where I am going.",
+                               className="homePage_text")
                     ],
-                    className="homePage_padding"
+                    # className="homePage_img_container"
                 ),
-                dbc.Col(
-                    [
-                        html.Img(src="assets/nasa_shirt.jpeg", className="img")
-                    ],
-                    className="homePage_img_container"
-                ),
-            ]
-        )
     ]
 )
 
 def Homepage():
     layout = html.Div([
         nav,
-        welcome,
         body,
-    ])
+    ], className="main")
     return layout
