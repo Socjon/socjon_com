@@ -1,6 +1,5 @@
 from time import time
-
-import dash
+from application import app
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
@@ -16,20 +15,18 @@ from auditor import Auditor
 # from missing_page import missing_page
 # from time_series import graph_page, build_graph
 # from landing_page import Landing_page
-
-external_stylesheets = [dbc.themes.CYBORG, '/assets/background.css']
-
-application = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
-app = application
-
-# app.enable_dev_tools(dev_tools_hot_reload=True)
-
-# app.scripts.config.serve_locally = True
-# app.css.config.serve_locally = True
-app.config.suppress_callback_exceptions = True
-
-
+#
+# external_stylesheets = [dbc.themes.CYBORG, '/assets/background.css']
+#
+# application = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+#
+# app = application
+#
+# # app.enable_dev_tools(dev_tools_hot_reload=True)
+#
+# # app.scripts.config.serve_locally = True
+# # app.css.config.serve_locally = True
+# app.config.suppress_callback_exceptions = True
 
 app.layout = html.Div([
     dcc.Location(id = 'url',refresh = False),
@@ -63,8 +60,5 @@ def display_page(pathname):
 #     #Graph update
 #     return graph
 
-# Beanstalk looks for application by default, if this isn't set you will get a WSGI error.
-application = app.server
-
 if __name__ == '__main__':
-    application.run(debug=True)
+    app.run_server(debug=True)
