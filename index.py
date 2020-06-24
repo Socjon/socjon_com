@@ -24,9 +24,10 @@ from auditor import Auditor
 #
 # # app.enable_dev_tools(dev_tools_hot_reload=True)
 #
-# # app.scripts.config.serve_locally = True
-# # app.css.config.serve_locally = True
-# app.config.suppress_callback_exceptions = True
+app.scripts.config.serve_locally = True
+app.css.config.serve_locally = True
+app.config.suppress_callback_exceptions = True
+
 
 app.layout = html.Div([
     dcc.Location(id = 'url',refresh = False),
@@ -60,5 +61,8 @@ def display_page(pathname):
 #     #Graph update
 #     return graph
 
+# ElasticBeanstalk looks for 'application'
+application = app.server
+
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    application.run(debug=True)
