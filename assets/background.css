@@ -51,8 +51,8 @@
 }
 
 .homePage_img_container {
-    height: 275px;
-    width: 275px;
+    height: 70%;
+    width: 70%;
     padding: 10px 10px;
     textAlign: center;
 }
@@ -70,6 +70,7 @@
 }
 
 .Generaltext {
+    font-size:2vw;
     color: white;
     font-family: Arial;
 }
@@ -108,7 +109,7 @@
 .navLink {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;;
+  font-size: 30px;;
   color: #818181;
   display: block;
 }
@@ -120,6 +121,22 @@ f1f1;
 /* Style page content */
 .main {
   margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
 }
+
+/* /home CSS */
+.earth_container {
+    height: 275px;
+    width: 275px;
+    padding: 10px 10px;
+    textAlign: center;
+}
+
+.homeTopText_container {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 48px;
+    width: 400px;
+    }
+
 

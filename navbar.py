@@ -33,9 +33,9 @@ import dash_html_components as html
 def Navbar():
     sidebar = html.Div(
         [
-            html.H2("Sidebar"),
+            html.H2(dbc.NavLink("Home", href="/home")),
             html.Hr(),
-            html.P("A simple sidebar layout with navigation links"),
+            html.P("Pardon the dust"),
             html.Ul(
                 [
 
