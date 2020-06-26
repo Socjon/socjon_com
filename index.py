@@ -10,6 +10,7 @@ from homepage import Homepage
 from about import About
 from blog import Blog
 from auditor import Auditor
+from portfolio import Portfolio
 
 # Pages that didn't make it
 # from missing_page import missing_page
@@ -24,15 +25,15 @@ from auditor import Auditor
 #
 # # app.enable_dev_tools(dev_tools_hot_reload=True)
 #
-app.scripts.config.serve_locally = True
-app.css.config.serve_locally = True
-app.config.suppress_callback_exceptions = True
+# app.scripts.config.serve_locally = True
+# app.css.config.serve_locally = True
+# app.config.suppress_callback_exceptions = True
 
 
 app.layout = html.Div([
     dcc.Location(id = 'url',refresh = False),
     html.Div(id = 'page-content')
-])
+],className="main")
 
 #Navigation callbacks
 @app.callback(Output('page-content', 'children'),
@@ -42,8 +43,8 @@ def display_page(pathname):
         return About()
     if pathname == '/blog':
         return Blog()
-    # if pathname == '/projects':
-    #     return graph_page()
+    if pathname == '/portfolio':
+        return Portfolio()
     if pathname == '/auditor':
         return Auditor()
     if pathname == '/home':

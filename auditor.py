@@ -14,7 +14,7 @@ body = dbc.Container(
         html.P("Non-Profit organizations are required to self-identify their area of focus based on the type of work \
         the organization does. I created machine learning models to classify these subgroups based on their annual 990 \
         filings."),
-        html.Img(src="assets/NTEE_classifcations.pdf"),
+        html.Img(src="assets/NTEE_classifcations.png"),
         html.P("The intent of the project was to identify inconsistencies within these subgroups. \
                This inturn would give the IRS auditors specific organizations to investigate and reduce fraud."),
         dcc.Graph(

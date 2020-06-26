@@ -50,13 +50,6 @@
     width: 100%;
 }
 
-.homePage_img_container {
-    height: 70%;
-    width: 70%;
-    padding: 10px 10px;
-    textAlign: center;
-}
-
 .welcomeHeader {
     color: white;
     font-family: Arial;
@@ -70,22 +63,23 @@
 }
 
 .Generaltext {
-    font-size:2vw;
+    font-size: 21px;
     color: white;
     font-family: Arial;
 }
 
-.homePage_padding {
-    padding: 10px 10px
-}
+ /* About page */
 
+.aboutPage_padding {
+    padding: 10px 10px;
+    flex-direction: column;
+}
 .aboutHeader {
     background: url(/assets/purple_sky.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 170px;
     width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -106,10 +100,10 @@
 }
 
 /* The navigation menu links */
-.navLink {
-  padding: 6px 8px 6px 16px;
+.sideNavLink {
+  padding: 6px 8px 6px 4px;
   text-decoration: none;
-  font-size: 30px;;
+  font-size: 25px;;
   color: #818181;
   display: block;
 }
@@ -120,23 +114,61 @@ f1f1;
 }
 /* Style page content */
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-left: 160px;
+  display: flex;
+  overflow:hidden;
 }
 
 /* /home CSS */
 .earth_container {
-    height: 275px;
-    width: 275px;
-    padding: 10px 10px;
-    textAlign: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 20px 0px 20px 0px;
 }
 
 .homeTopText_container {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    line-height: 28px;
-    margin: 0 0 48px;
-    width: 400px;
-    }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  padding: 20px 0px 0px 0px;
+  line-height: 28px;
+  width: 75%;
+  overflow-wrap: break-word;
+  backdrop-filter: blur(1.25px);
+}
 
+.homeBotText_container {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  line-height: 28px;
+  padding: 0px 0px 0px 0px;
+  width: 75%;
+  overflow-wrap: break-word;
+  backdrop-filter: blur(1.25px);
+}
 
+.homePage_container {
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
+    min-height: 100vh;
+    justify-content: center;
+    /* background: linear-gradient(rgba(176,180,176,.4),#fff) */
+}
+
+.blogLinks {
+   display: block;
+}
+
+.comingSoon:hover {
+   display: block;
+   background-color: red;
+   opacity: 0.5;
+}
+.homePage_background {
+  background: url(/assets/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}

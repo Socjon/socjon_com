@@ -35,25 +35,14 @@ def Navbar():
         [
             html.H2(dbc.NavLink("Home", href="/home")),
             html.Hr(),
-            html.P("Pardon the dust"),
+            html.P("Pardon the dust. We are still getting things into place", style={"text-align": "center"}),
             html.Ul(
                 [
-
-                    dbc.DropdownMenu(
-                                        nav=True,
-                                        in_navbar=True,
-                                        label="Portfolio",
-                                        children=[
-                                            dbc.DropdownMenuItem("Auditors Aid", href="/auditor"),
-                                            dbc.DropdownMenuItem("How I built this site", href="/dash_101"),
-                                            dbc.DropdownMenuItem(divider=True),
-                                            dbc.DropdownMenuItem("Entry 3"),
-                                        ],
-                    ),
                     dbc.NavLink("About", href="/about"),
+                    dbc.NavLink("Portfolio", href="/portfolio"),
                     dbc.NavLink("Blog", href="/blog"),
                     dbc.NavLink("LinkedIn", href="https://www.linkedin.com/in/tyler-jonathan/")
-                ], className="navLink"
+                ], className="sideNavLink"
             ),
         ],
         className="sidenav",

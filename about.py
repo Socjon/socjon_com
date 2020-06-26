@@ -7,16 +7,15 @@ from navbar import Navbar
 
 nav = Navbar()
 
-header = html.Div(
-    [
-        html.H2("About Me", style={"text-align": "center", "position": "absolute"}),
-        # Photo by Vincentiu Solomon on Unsplash
-    ],
-    className="aboutHeader"
-)
-
 body = dbc.Container(
     [
+        dbc.Row(
+            [
+                html.H2("About Me", style={"text-align": "center", "position": "absolute"}),
+                # Photo by Vincentiu Solomon on Unsplash
+            ],
+            className="aboutHeader"
+        ),
         dbc.Row(
             [
                 dbc.Col(
@@ -32,7 +31,7 @@ body = dbc.Container(
                         teams that are making a positive impact on the world. Socially Distant but always available at \
                         Jonctyler@gmail.com.", className="Generaltext"),
                     ],
-                    className="homePage_padding"
+                    className="aboutPage_padding"
                 ),
                 dbc.Col(
                     [
@@ -48,7 +47,6 @@ body = dbc.Container(
 def About():
     layout = html.Div([
         nav,
-        header,
         body
-    ], className="main")
+    ])
     return layout

@@ -35,19 +35,23 @@ body = dbc.Container(
                     ],
                         className="earth_container"
                         ),
-                html.P("All of this data tells a story. Powerful tools exist to navigate these seas. \
-                        IDE and Dashboards exist as the schooners, boats, and ships that allow us to set sail. \
-                        Machine learning can see the squalls coming to avoid them. The only thing left is the crew and \
-                        the destination.",
-                       className="homePage_text"),
-                html.Br(),
-                html.P("So this is my small vessel venturing into the great unknown. \
-                        Take a look where I have been and maybe help me find where I am going.",
-                       className="homePage_text")
+                dbc.Container(
+                    [
+                        html.P("All of this data tells a story. Powerful tools exist to navigate these seas. \
+                            IDE and Dashboards exist as the schooners, boats, and ships that allow us to set sail. \
+                            Machine learning can see the squalls coming to avoid them. The only thing left is the crew and \
+                            the destination."),
+                        html.Br(),
+                        html.P("So this is my small vessel venturing into the great unknown. \
+                            Take a look where I have been and maybe help me find where I am going.")
+
+                    ],
+                    className="homeBotText_container"
+                ),
             ],
-            className="homePage_img_container"
         ),
-    ]
+    ],
+    className="homePage_background"
 )
 
 
@@ -75,7 +79,7 @@ dictionary_of_urls = {"penguin populations": "http://www.penguinmap.com/mapppd",
                       'squirrel population in NY Central Park': 'https://www.thesquirrelcensus.com/',
                       'field operations in UN Peacekeeping missons': 'https://peacekeeping.un.org/en/open-data-portal',
                       'earthquakes in Mexico from 1787 to 2018': 'https://www.nature.com/articles/s41597-019-0234-z',
-                      'who is buying homes in Greece after the international financial crisis ': 'https://medium.com/athenslivegr/whose-home-is-this-f3b45d878b0b',
+                      'who is buying homes in Greece after the international financial crisis': 'https://medium.com/athenslivegr/whose-home-is-this-f3b45d878b0b',
                       'Certificates of Competency for the State Department employees': 'https://www.state.gov/resources-bureau-of-human-resources/',
                       'a survey of graduate students about the nature of doctoral research': 'https://www.nature.com/articles/d41586-019-03459-7',
                       'a databsae of British and Irish hills': 'http://www.hills-database.co.uk/index.html',
@@ -93,11 +97,11 @@ def update_links(n):
     return html.Span([
         dcc.Link(one + ", ", href=dictionary_of_urls[one]),
         dcc.Link(two + ", ", href=dictionary_of_urls[two]),
-        dcc.Link("and " + three + ".", href=dictionary_of_urls[three])],style={"display": "inline"})
+        dcc.Link("and " + three + ".", href=dictionary_of_urls[three])])
 
 def Homepage():
     layout = html.Div([
         nav,
         body,
-    ], className="main")
+    ])
     return layout
