@@ -1,0 +1,328 @@
+.bgSizing {
+    background: url(/assets/construction.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 66.66%;
+    /* (img-height / img-width * container-width) */
+}
+
+.fourOhfour {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.homeButton {
+    font-size: 18px;
+    border: 5px solid #555;
+    background: #540;
+}
+
+.welcome_img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/smiling_face.png);
+    width: 100%;
+    min-height: 500px;
+    padding-top: 66.66%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.welcome_text {
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.img {
+    max-width:100%;
+    max-height:100%;
+}
+
+.colContainer {
+    display: table; /* Make the container element behave like a table */
+    width: 100%;
+}
+
+.welcomeHeader {
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+.welcomeBanner {
+    background: #4da6ff;
+    height: auto;
+    padding: 30px 80px
+}
+
+.Generaltext {
+    font-size: 21px;
+    color: white;
+    font-family: Arial;
+}
+
+ /* About page */
+
+.aboutPage_padding {
+    padding: 10px 10px;
+    flex-direction: column;
+}
+.aboutHeader {
+    background: url(/assets/purple_sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 170px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sideNavLink {
+  padding: 6px 8px 6px 4px;
+  text-decoration: none;
+  font-size: 25px;;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.navLink:hover {
+  color: #f1f1f1;
+}
+/* Style page content */
+.main {
+  margin-left: 160px;
+  display: flex;
+  overflow:hidden;
+}
+
+/* /home CSS */
+.earth_container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 20px 0px 20px 0px;
+}
+
+.homeTopText_container {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  padding: 20px 0px 0px 0px;
+  line-height: 28px;
+  width: 75%;
+  overflow-wrap: break-word;
+  backdrop-filter: blur(1.25px);
+}
+
+.homeBotText_container {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  line-height: 28px;
+  padding: 0px 0px 0px 0px;
+  width: 75%;
+  overflow-wrap: break-word;
+  backdrop-filter: blur(1.25px);
+}
+
+.homePage_container {
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
+    min-height: 100vh;
+    justify-content: center;
+    /* background: linear-gradient(rgba(176,180,176,.4),#fff) */
+}
+
+.blogLinks {
+   display: block;
+}
+
+.comingSoon:hover {
+   display: block;
+   background-color: red;
+   opacity: 0.5;
+}
+.homePage_background {
+  background: url(/assets/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+
+
+/*THIS was TAKEN FROM..... https://codepen.io/szpakoli/pen/xbJjdR */
+
+// variables
+$card-width:  350px;
+$card-height: 500px;
+$h-color:     #9CC9E3;
+$yellow:      #D0BB57;
+$txt-color:   #DCE3E7;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #323c41;
+}
+
+.blog-card{
+  width: $card-width;
+  height: $card-height;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+  text-align: center;
+  display: flex;
+
+  &.auditor-card{
+    background: url(/assets/tax_forms_Olga_DeLawrence.jpg) no-repeat;
+    order: 1;
+  }
+
+  &.socjon-card{
+    background: url(/assets/nasa_shirt.jpeg) no-repeat;
+    order: 2;
+  }
+
+  &.TBD-card{
+    background: url(/assets/tax_forms_Olga_DeLawrence.jpg) no-repeat;
+    order: 3;
+  }
+
+  .color-overlay{
+    /* Rectangle 11: */
+    background: rgba(84,104,110,0.4);
+    width: $card-width;
+    height: $card-height;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: background .3s cubic-bezier(.33,.66,.66,1);
+  }
+  .gradient-overlay{
+    /* bg-gradient: */
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 21%);
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 21%);
+    background-image: -o-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 21%);
+    background-image: linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 21%);
+    width: $card-width;
+    height: $card-height;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    z-index: 15;
+  }
+
+  &:hover{
+
+    .card-info{
+      opacity: 1;
+      bottom: 120px;
+    }
+    .color-overlay{
+      background: rgba(84,104,110,0.8);
+    }
+  }
+}
+
+.title-content{
+  text-align: center;
+  margin: 70px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+h3{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: $h-color;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
+}
+hr{
+  width: 50px;
+  height: 3px;
+  margin: 20px auto;
+  border: 0;
+  background: $yellow;
+}
+.intro{
+  width: 170px;
+  margin: 0 auto;
+  color: $txt-color;
+  font-family: 'Droid Serif', serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 18px;
+}
+.card-info{
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 50px;
+  color: $txt-color;
+  font-family: 'Droid Serif', serif;
+  font-style: 16px;
+  line-height: 24px;
+  z-index: 20;
+  opacity: 0;
+  transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);
+}
+
+.utility-info{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: 20;
+}
+.utility-list{
+  list-style-type: none;
+  margin: 0 0 30px 20px;
+  padding: 0;
+  width: 100%;
+
+  li{
+    margin: 0 15px 0 0;
+    padding: 0 0 0 22px;
+    display: inline-block;
+    color: $txt-color;
+    font-family: 'Roboto', sans-serif;
+
+  }
+}
