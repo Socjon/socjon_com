@@ -10,10 +10,11 @@ topics = html.Div(
         html.Div(
                 [
                     html.H3("Dashboards"),
-                    html.P('Coming Soon', style={"display": "inline"}),
+                    html.P('Coming Soon in red', style={"display": "inline"}),
                     html.Ul(
                         [
-                            html.Div(dcc.Link("Part 1: What is Dash?", href="", className="comingSoon")),
+                            html.Div(dcc.Link("Part 1 - Dash: A framework for Data Scientists to dabble in software engineering and UX/UI",
+                                              href="https://medium.com/@socjon/dash-a-framework-for-data-scientists-to-dabble-in-software-engineering-and-ux-ui-f9813fdeb6fa?source=friends_link&sk=b36e9ef6c45797c76c7d2a1afd1b0fe0")),
                             html.Div(dcc.Link("Part 2: Dash and Multipage Functionality", href="", className="comingSoon")),
                             html.Div(dcc.Link("Part 3: Hosting your Dash app", href="", className="comingSoon")),
                         ]
