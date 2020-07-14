@@ -9,7 +9,6 @@ import dash_bootstrap_components as dbc
 from homepage import Homepage
 from about import About
 from blog import Blog
-from auditor import Auditor
 from portfolio import Portfolio
 
 # Pages that didn't make it
