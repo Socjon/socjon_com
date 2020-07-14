@@ -125,6 +125,9 @@
   display: flex;
   overflow: hidden;
 }
+.main.portfolio-page {
+  flex-wrap: wrap;
+}
 
 /* /home CSS */
 .earth_container {
@@ -204,14 +207,19 @@ body {
 }
 .blog-card.auditor-card {
   background: url(/assets/tax_forms_Olga_DeLawrence.jpg) no-repeat;
+  background-size: 500px 500px;
+  background-position: 55% 50%;
   order: 1;
 }
 .blog-card.socjon-card {
-  background: url(/assets/nasa_shirt.jpeg) no-repeat;
+  background: url(/assets/lightbulb_Diego_PH.jpg) no-repeat;
   order: 2;
+  margin: 0 50px;
+  background-position: 55% 50%;
 }
 .blog-card.TBD-card {
-  background: url(/assets/tax_forms_Olga_DeLawrence.jpg) no-repeat;
+  background: url(/assets/sunflower_kyle_glenn.jpg) no-repeat;
+  background-size: 370px 600px;
   order: 3;
 }
 .blog-card .color-overlay {

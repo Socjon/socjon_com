@@ -117,6 +117,10 @@
   margin-left: 160px;
   display: flex;
   overflow:hidden;
+
+  &.portfolio-page{
+  flex-wrap: wrap;
+  }
 }
 
 /* /home CSS */
@@ -206,16 +210,21 @@ body{
 
   &.auditor-card{
     background: url(/assets/tax_forms_Olga_DeLawrence.jpg) no-repeat;
+    background-size: 500px 500px;
+    background-position: 55% 50%;
     order: 1;
   }
 
   &.socjon-card{
-    background: url(/assets/nasa_shirt.jpeg) no-repeat;
+    background: url(/assets/lightbulb_Diego_PH.jpg) no-repeat;
     order: 2;
+    margin: 0 50px;
+    background-position: 55% 50%;
   }
 
   &.TBD-card{
-    background: url(/assets/tax_forms_Olga_DeLawrence.jpg) no-repeat;
+    background: url(/assets/sunflower_kyle_glenn.jpg) no-repeat;
+    background-size: 370px 600px;
     order: 3;
   }
 
