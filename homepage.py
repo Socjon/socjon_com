@@ -103,5 +103,6 @@ def Homepage():
     layout = html.Div([
         nav,
         body,
-    ])
+    ],
+    className="main home-page")
     return layout

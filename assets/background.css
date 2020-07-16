@@ -128,6 +128,9 @@
 .main.portfolio-page {
   flex-wrap: wrap;
 }
+.main.home-page {
+  margin: auto;
+}
 
 /* /home CSS */
 .earth_container {
